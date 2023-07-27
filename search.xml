@@ -4,23 +4,25 @@
   
     
     <entry>
-      <title>测试一下</title>
+      <title>本周计划</title>
       <link href="/2023/07/27/7.27/"/>
       <url>/2023/07/27/7.27/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h3 id="本周剩余工作"><a href="#本周剩余工作" class="headerlink" title="本周剩余工作"></a>本周剩余工作</h3><ol><li>阅读《网络科学导论》3-7章，记录核心概念并实现相关代码。<ul><li>网络结构</li><li>拓扑性质</li><li>社团划分</li></ul></li><li>学习C++基础。</li><li>清理库存,制作视频发布小红书/b站。</li></ol><h3 id="工作安排"><a href="#工作安排" class="headerlink" title="工作安排"></a>工作安排</h3><h4 id="7-28-周五"><a href="#7-28-周五" class="headerlink" title="7.28 周五"></a>7.28 周五</h4><ol><li>早上 | 9-11.15       | 看书并记录相关概念</li><li>下午 | 13.45 - 17.10 | 看书+写代码</li><li>晚上 | 18.00 - 20.45 | 学习C++</li></ol>]]></content>
       
       
       <categories>
           
-          <category> 测试 </category>
+          <category> 计划 </category>
+          
+          <category> 个人规划 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> test </tag>
+            <tag> 周计划 </tag>
             
         </tags>
       
