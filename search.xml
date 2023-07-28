@@ -2,6 +2,31 @@
 <search> 
   
   
+    
+    <entry>
+      <title>网络基本拓扑性质</title>
+      <link href="/2023/07/28/7.28/"/>
+      <url>/2023/07/28/7.28/</url>
+      
+        <content type="html"><![CDATA[<h2 id="网络的拓扑性质"><a href="#网络的拓扑性质" class="headerlink" title="网络的拓扑性质"></a>网络的拓扑性质</h2><ul><li><strong>割点</strong>：如果去除某个顶点就使得一个图从连通变为不连通,那么该顶点就称为割点。</li><li><strong>桥</strong>：如果去除某条边就使得一个图从连通变为不连通,那么这条边就称为桥。</li><li><strong>巨片</strong>： 许多实际的大规模复杂网络都是不连通的，但是往往会存在一个特别大的连通片，它包含了整个网络中相当比例的节点。<h3 id="弱联通巨片"><a href="#弱联通巨片" class="headerlink" title="弱联通巨片"></a>弱联通巨片</h3></li><li>定义：实际的大规模有向网络往往既不是强连通也不是弱连通的,但是许多有向网络往往有一个包含了网络中相当部分节点的很大的弱连通片。这一弱联通巨片往往具有一种包含4个部分的蝴蝶结结构。<br><img src="../_posts/July/image.png" alt="Alt text"></li><li><p>(1)<strong>强连通核</strong>(SCC)：强连通巨片，位于网络的中心。SCC中任意两个节点之间都是强连通的，即存在从任一节点到另一节点的有向路径。</p></li><li><p>(2)<strong>入部</strong>：包含那些可以通过有向路径到达SCC但不能从SCC到达的节点，一定存在从IN中任一节点到SCC中任一节点的有向路径，反之，从SCC中任一节点出发沿着有向边都无法到达IN中的一个节点。</p></li><li><p>(3)<strong>出部</strong>：包含那些可以从SCC通过有向路径到达但不能到达SCC的节点。也就是说，一定存在从SCC中任一节点到OUT中任一节点的有向路径;反之,从OUT中任一节点出发沿着有向边都无法到达SCC中的一个节点。从IN中任一节点到OUT中任一节点必然存在有向路径,而且该路径必经过SCC中的某些节点。</p></li><li><p>(4)<strong>卷须</strong>(tendrils)：包含那些既无法到达SCC也无法从SCC到达的节点。对于挂在IN上的任一卷须节点,必至少存在一条从IN中某一节点到该节点的不需经过SCC的有向路径;对于挂在OUT上的任一卷须节点,必至少存在一条从该节点到OUT中某一节点的不需经过SCC的有向路径。此外，还有可能存在从挂在IN上的卷须节点到挂在OUT上的卷须节点的不经过SCC的有向路径，这些串在一起的卷须节点称为<strong>管子</strong>(Tube)。</p></li></ul><h3 id="度与平均度"><a href="#度与平均度" class="headerlink" title="度与平均度"></a>度与平均度</h3><ul><li><p><strong>度</strong>：无向网络中节点$i$的度$k_i$定义为与节点直接相连的边的数目。</p></li><li><p><strong>平均度</strong>：网络中所有节点的度的平均值。其中M代表边数，N为节点数目。</p><script type="math/tex; mode=display">  M = \frac{N<k>}{2} = \frac{1}{2}\sum{a_{ij}}</script><script type="math/tex; mode=display">  <k> = \frac{2M}{N}</script></li><li><strong>入度&amp;出度</strong>：出度：节点指出去的边的数目。入度：节点指进来的边的数目。对于系统中每个个体而言不一定成立的性质，却会在整个系统层面成立。</li><li>强度：节点$i$的强度定义为：<script type="math/tex">s_i = \sum_{j=1}^{N}{w_{ij}}</script></li><li>密度(density):一个包含N个节点的网络的密度$ρ$定义为网络中实际存在的边数与最大可能的边数之比。无向网络中有，有向网络中去掉1/2即可。<script type="math/tex; mode=display">ρ = \frac{M}{\frac{1}{2}N(N-1)} \approx \frac{<k>}{N}</script></li><li>实际边数与$N^2$同阶，则认为网络是稠密的。</li><li>实际网络的演化服从超线性关系，即为稠密化幂律，其边M(t)和节点N(t)的关系介于线性与平方之间。<script type="math/tex; mode=display">M(t) ~ N^α(t),  1 < α < 2</script><script type="math/tex; mode=display">lnM(t) \approx \alpha(lnN(t)) + C, 1 < \alpha < 2</script></li></ul><h3 id="平均路径长度-amp-直径"><a href="#平均路径长度-amp-直径" class="headerlink" title="平均路径长度&amp;直径"></a>平均路径长度&amp;直径</h3><ul><li>网络中两个节点$i$和$j$之间的最短路径(测地距离)，是指连接这两个节点的边数最少的路径。</li><li>平均路径长度(特征路径长度、平均距离):定义为任一两个节点之间的距离的平均值，即<script type="math/tex; mode=display">  L = \frac{1}{\frac{1}{2}N(N-1)}\sum_{i \geq j}d_{ij}</script></li><li><p>全局效率(GE):反映了网络中两个节点之间发送信息的平均效率。</p><script type="math/tex; mode=display">GE = \frac{1}{\frac{1}{2}{N}(N-1)}\sum_{i > j}\frac{1}{d_{ij}}</script><script type="math/tex; mode=display">L = \frac{1}{GE}</script></li><li><p>网络直径(D):</p><script type="math/tex; mode=display">D = max_{i,j}d_{ij}</script></li><li><p>f(d): 网络中距离为d的联通的节点对的数量占整个网络中联通的节点对数量的比例。</p></li><li><p>g(d): 网络中距离不超过d的联通的节点对的数量占整个网络中联通的节点对数量的比例。<br>如果存在整数D满足下式，则D为网络的有效直径：</p><script type="math/tex; mode=display">  g(D-1)<0.9, g(D) \geq 0.9</script><p>  推广:(插值法)假设$d \leq r &lt; d + 1$，通过线性插值定义$g(r)$如下：</p><script type="math/tex; mode=display">  g(r) = g(d) + (g(d+1) - g(d))(r-d)</script></li><li><p>求解加权有向网络上两点之间的最短路：迪杰斯特拉算法。存在负权值边的网络的最短路径问题，采用Bellman-Ford算法。<br>TODO：代码</p></li></ul><h3 id="聚类系数"><a href="#聚类系数" class="headerlink" title="聚类系数"></a>聚类系数</h3><p>定义:刻画你的任意两个朋友之间也互为朋友的概率。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 研究生 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络科学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
   
   
 </search>
