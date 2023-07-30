@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>一些遇到的报错</title>
+      <link href="/2023/07/30/7.30/"/>
+      <url>/2023/07/30/7.30/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Recv-failure-Connection-was-reset"><a href="#Recv-failure-Connection-was-reset" class="headerlink" title="Recv failure: Connection was reset"></a>Recv failure: Connection was reset</h3><p><img src="image.png" alt="Alt text"></p><ul><li>原因：连接没有释放</li><li>解决方案：<a href="https://blog.csdn.net/m0_69087087/article/details/128838186">https://blog.csdn.net/m0_69087087/article/details/128838186</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Code </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> error </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>平均路径长度&amp;直径</title>
       <link href="/2023/07/29/%E5%B9%B3%E5%9D%87%E8%B7%AF%E5%BE%84%E9%95%BF%E5%BA%A6&amp;%E7%9B%B4%E5%BE%84/"/>
       <url>/2023/07/29/%E5%B9%B3%E5%9D%87%E8%B7%AF%E5%BE%84%E9%95%BF%E5%BA%A6&amp;%E7%9B%B4%E5%BE%84/</url>
